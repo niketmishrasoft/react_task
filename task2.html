@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // Conditional Rendering in JSX
+        const show_text = true;
+
+        const first_text = "Seize the day!";
+        const sec_text = "Carpe diem!"
+
+        const new_text = show_text ? <p>{first_text}</p> : <p>{sec_text}</p>;
+
+
+        // element using JSX to display the text
+        // const element = <div><p>Seize the day</p></div>
+
+        // Create a JSX element for the paragraph using the dynamic text
+        // const text= "Seize the day";
+
+        // const element = <div><p>{text}</p></div>
+        // Your JSX code here
+
+        const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+        reactRoot.render(new_text)
+    </script>
+
+
+</body>
+
+</html>
